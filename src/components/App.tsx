@@ -1,24 +1,22 @@
 import * as React from "react";
+import styled from "@emotion/styled";
 
-import Button from "./atoms/Button";
+import CreditCard from "./atoms/CreditCard";
+
+const Container = styled.div({
+  backgroundColor: "#ddeefc",
+  width: "100vw",
+  height: "100vh",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center"
+});
 
 const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>React boilerplate with TypeScript.</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <Button>Styled Button</Button>
-        <Button primary>Styled Button</Button>
-      </header>
-    </div>
+    <Container className="App">
+      <CreditCard />
+    </Container>
   );
 };
 
